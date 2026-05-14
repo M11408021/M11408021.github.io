@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【吃瓜指南】大導也崩潰？《片廠風雲》揭秘 - M11408021</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#0A0A0A',
+                            surface: '#161616',
+                            accent: '#FF3E00',
+                            glass: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'glow': 'glow 3s infinite ease-in-out',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: '0.3' },
+                            '50%': { opacity: '0.6' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #E5E5E5;
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FFF 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-number {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 4rem;
+            opacity: 0.1;
+            position: absolute;
+            top: -1rem;
+            left: -0.5rem;
+            z-index: 0;
+            color: #D4AF37;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="font-body custom-scrollbar">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-50 bg-brand-dark">
+        <div id="progress" class="h-full bg-brand-gold w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Navigation Overlay -->
+    <header class="fixed top-0 w-full z-40 px-6 py-4 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-brand-gold rounded-full flex items-center justify-center font-bold text-brand-dark">M</div>
+            <span class="font-display font-semibold tracking-wider text-sm">STUDIO INSIDER</span>
+        </div>
+        <div class="text-[10px] tracking-[0.2em] text-white/50 uppercase">Student ID: M11408021</div>
+    </header>
+
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent z-10"></div>
+                <div class="w-full h-full scale-105 opacity-60">
+                    <img src='https://opal.google/board/blobs/ccd61cde-a59b-4d86-88c8-1382d02651d9' alt='media_1' class="w-full h-full object-cover" />
+                </div>
+            </div>
+
+            <div class="relative z-20 max-w-5xl mx-auto text-center animate-fade-in-up">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.3em] uppercase bg-brand-accent text-white rounded-full">
+                    Exclusive Insight
+                </span>
+                <h1 class="font-display text-4xl md:text-7xl font-extrabold mb-8 tracking-tight leading-tight text-gradient">
+                    【吃瓜指南】大導也崩潰？<br>《片廠風雲》揭秘：<br>好萊塢與華語影壇的豪門恩怨錄
+                </h1>
+                <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto font-light leading-relaxed">
+                    影視圈，這個在外人眼裡鑲滿金邊的世界，究竟是夢想的發源地，還是資本與權力撕殺的「修羅場」？
+                </p>
+                <div class="mt-12 animate-bounce">
+                    <svg class="w-6 h-6 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Text -->
+        <section class="max-w-4xl mx-auto px-6 py-20">
+            <div class="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden">
+                <p class="text-xl md:text-2xl font-light text-white/90 leading-relaxed italic border-l-4 border-brand-gold pl-6">
+                    今天，我們不聊電影美學，我們來當一次「高級吃瓜群眾」，聊聊那些被藏在螢光幕後的「片廠風雲」。
+                </p>
+            </div>
+        </section>
+
+        <!-- Bento Content Grid -->
+        <section class="max-w-7xl mx-auto px-6 py-12">
+            <div class="flex flex-col gap-12">
+                
+                <!-- Section 1: survival -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-5 relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold to-brand-accent rounded-2xl blur opacity-20 group-hover:opacity-40 transition"></div>
+                        <div class="relative bg-brand-surface rounded-2xl overflow-hidden aspect-video lg:aspect-square flex items-center justify-center p-8 border border-white/10">
+                             <div class="text-center">
+                                <span class="block font-display text-6xl mb-4">🎬</span>
+                                <h3 class="text-brand-gold font-bold text-xl uppercase tracking-widest">The Studio</h3>
+                                <p class="text-white/40 text-sm mt-2">2025 Phenomenon</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6 relative">
+                        <span class="section-number">01</span>
+                        <h2 class="text-3xl md:text-4xl font-bold font-display text-white relative z-10">一、 影視圈生存戰：是夢工廠還是修羅場？</h2>
+                        <div class="p-6 bg-brand-accent/10 border border-brand-accent/20 rounded-xl">
+                            <h4 class="text-brand-accent font-bold mb-2">爆點標題：</h4>
+                            <p class="text-xl font-bold text-white">不想當大官的導演不是好社畜？2025 最紅「影視避雷針」！</p>
+                        </div>
+                        <p class="text-white/70 text-lg leading-relaxed">
+                            如果你還沒聽過 2025 年在 Apple TV+ 橫空出世的《片廠風雲》（The Studio），那你可能錯過了近年來最尖銳的「職場生存指南」。這部由賽斯·羅根（Seth Rogen）自編自導自演的現象級神劇，精準地演活了虛構片廠「大陸影業」（Continental）新任負責人的窘境。
+                        </p>
+                        <p class="text-white/70 text-lg leading-relaxed">
+                            說穿了，「片廠風雲」不只是一部劇名，它更是一個代名詞——象徵著影視產業中那些圍繞著權力、資源與創意的博弈。這不是那種陽春白雪的藝術討論，而是更接近宮鬥劇的職場現形記。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Section 2: history -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 space-y-6 relative order-2 lg:order-1">
+                        <span class="section-number">02</span>
+                        <h2 class="text-3xl md:text-4xl font-bold font-display text-white relative z-10">二、 那些年的影壇爭霸：邵氏 vs 電懋</h2>
+                        <div class="p-6 bg-brand-gold/10 border border-brand-gold/20 rounded-xl">
+                            <h4 class="text-brand-gold font-bold mb-2">爆點標題：</h4>
+                            <p class="text-xl font-bold text-white">爺爺輩的「大廠互黑」：看邵老六與陸運濤如何開啟華語影視修羅場！</p>
+                        </div>
+                        <p class="text-white/70 text-lg leading-relaxed">
+                            回望過去，我們會發現「片廠鬥爭」早有血統。1920 到 1960 年代的好萊塢，「五大三小」片廠玩的是垂直整合的霸道總裁遊戲。而在華語影壇，1950 到 1970 年代的「邵氏」與「電懋」之爭，精彩程度絕對不輸給現在的商業商戰。
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="glass-card p-4 rounded-xl border-l-4 border-brand-gold">
+                                <h5 class="text-white font-bold mb-1">搶拍大戰</h5>
+                                <p class="text-sm text-white/60">以《梁山伯與祝英台》為例，兩家公司動員了舉廠之力，不僅是拼速度，更是拼財力。</p>
+                            </div>
+                            <div class="glass-card p-4 rounded-xl border-l-4 border-brand-accent">
+                                <h5 class="text-white font-bold mb-1">溫柔的革命</h5>
+                                <p class="text-sm text-white/60">1980 年代台灣新電影浪潮，小野、吳念真在僵化權力結構中突圍。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-1 lg:order-2">
+                        <div class="rounded-2xl overflow-hidden h-full min-h-[300px] relative">
+                             <div class="absolute inset-0 bg-brand-gold/10 mix-blend-overlay"></div>
+                             <div class="bg-zinc-800 h-full flex items-center justify-center p-12 text-center border border-white/5">
+                                <div>
+                                    <span class="text-brand-gold text-5xl block mb-4">🏛️</span>
+                                    <h4 class="font-display font-bold text-2xl">CLASSIC ERA</h4>
+                                    <p class="text-white/50 mt-2 italic">Shaw Brothers vs. MP & GI</p>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: meta magic -->
+                <div class="glass-card rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                    <div class="relative z-10 max-w-3xl">
+                        <span class="section-number">03</span>
+                        <h2 class="text-3xl md:text-4xl font-bold font-display text-white mb-6">三、 為何我們愛看演藝圈互撕？</h2>
+                        <h4 class="text-brand-gold font-bold mb-4">大明星演「壞掉的自己」最對味！為什麼影視高層總在毀掉好電影？</h4>
+                        <p class="text-white/70 text-lg leading-relaxed mb-8">
+                            為什麼大眾對「片廠風雲」這類主題愛不釋手？從知識份子的視角來看，這是一種「後設敘事」（Meta-narrative）的魔力。影視圈主動解構自我，讓這份工作從神祕走向了「黑色幽默」般的公開。
+                        </p>
+                        <div class="inline-flex items-center gap-4 px-6 py-3 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition cursor-default">
+                            <div class="flex -space-x-3">
+                                <div class="w-8 h-8 rounded-full bg-zinc-700 border-2 border-brand-dark"></div>
+                                <div class="w-8 h-8 rounded-full bg-zinc-600 border-2 border-brand-dark"></div>
+                                <div class="w-8 h-8 rounded-full bg-zinc-500 border-2 border-brand-dark"></div>
+                            </div>
+                            <span class="text-sm font-medium text-white/80">+ 2.4M 觀眾共鳴中</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 & 5 side by side -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-card p-10 rounded-[2rem] space-y-6">
+                        <span class="section-number">04</span>
+                        <h2 class="text-2xl font-bold text-white font-display">四、 華麗背後的爛攤子</h2>
+                        <h4 class="text-brand-accent font-bold">票房輸了就滾蛋？</h4>
+                        <p class="text-white/60">
+                            當下的創作者正面臨著「藝術 vs 麵包」的極端考驗。當大數據與演算法精確地告訴你「這段情節要在第幾秒加個笑點」時，導演的藝術靈魂還剩多少？
+                        </p>
+                        <div class="pt-4 border-t border-white/10">
+                            <span class="text-xs tracking-widest text-white/40 uppercase">Key Themes:</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="text-[10px] bg-brand-dark px-2 py-1 rounded border border-white/10">DEI</span>
+                                <span class="text-[10px] bg-brand-dark px-2 py-1 rounded border border-white/10">ALGORITHM</span>
+                                <span class="text-[10px] bg-brand-dark px-2 py-1 rounded border border-white/10">ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-10 rounded-[2rem] space-y-6 border-brand-gold/30">
+                        <span class="section-number">05</span>
+                        <h2 class="text-2xl font-bold text-white font-display">五、 未來預測</h2>
+                        <h4 class="text-brand-gold font-bold">AI 製作人上線中？</h4>
+                        <p class="text-white/60">
+                            未來的「片廠風雲」可能不再是人跟人的爭吵，而是演算法與演算法的對決。製片人的「美學直覺」是否會被「數據預測」徹底取代？這將是未來十年最大的懸念。
+                        </p>
+                        <div class="pt-4 border-t border-white/10">
+                            <span class="text-xs tracking-widest text-white/40 uppercase">Future Tech:</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="text-[10px] bg-brand-gold/20 text-brand-gold px-2 py-1 rounded border border-brand-gold/30">AI CREATIVE</span>
+                                <span class="text-[10px] bg-brand-gold/20 text-brand-gold px-2 py-1 rounded border border-brand-gold/30">STREAMING WARS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Conclusion Footer-like Section -->
+        <section class="mt-20 py-32 px-6 relative overflow-hidden bg-brand-surface border-t border-white/5">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-gold rounded-full blur-[120px] animate-glow"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="font-display text-4xl md:text-5xl font-extrabold mb-8 text-white">結語：在混亂中造夢</h2>
+                <p class="text-xl text-white/70 leading-relaxed mb-12">
+                    「片廠風雲」不僅僅是拍電影的故事，它更是一面映照現代權力結構的鏡子。即便在資本與數據主導的冷酷時代，那些創作者在混亂中掙扎、在權力鬥爭中護航故事的模樣，依然是影視產業中最具生命力、也最令人迷戀的核心。
+                </p>
+                <p class="text-2xl font-display font-bold text-brand-gold">
+                    畢竟，最好的劇本，往往就發生在攝影機停止轉動之後。
+                </p>
+                
+                <div class="mt-20 flex flex-col items-center gap-4">
+                    <div class="w-12 h-px bg-white/20"></div>
+                    <div class="text-xs tracking-[0.5em] text-white/30 uppercase">Author Insight • M11408021</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Progress bar scroll effect
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress').style.width = scrolled + "%";
+        });
+
+        // Simple Intersection Observer for reveal effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
